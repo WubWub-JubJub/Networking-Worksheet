@@ -82,7 +82,7 @@ void Game::mouseButtonReleased(const sf::Event::MouseButtonReleased* event)
                 std::cout << "Attempting to connect to Seerver" << std::endl;
                 client = std::make_unique<Client>();
                 client->connect();
-                //client->run();
+                client->run();
             }
                 
      

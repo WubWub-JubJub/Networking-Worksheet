@@ -14,6 +14,7 @@ public:
 	void listen(sf::TcpSocket& c_socket);
 	void send(std::string buffer, sf::TcpSocket& c_socket);
 	void input();
+	void relay(std::string buffer, sf::TcpSocket& c_socket);
 
 private:
 	std::vector<std::thread> workers;
