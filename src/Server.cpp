@@ -14,6 +14,8 @@ void Server::init()
 
 void Server::run()
 {
+	std::thread input_thread([&] {input();});
+	input_thread.detach();
 	while (running)
 	{
 		sf::TcpSocket& c_sock = *connections.emplace_back(std::make_unique<sf::TcpSocket>());
